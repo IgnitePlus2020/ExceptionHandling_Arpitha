@@ -18,7 +18,7 @@ public class SwiggyDelivery {
         try {
             checkcode(zipcode);
         } catch (Exception e) {
-            System.out.println("Delivery unavailable at this location");
+            System.out.println("Delivery unavailable at this location.");
         }
     }
 
@@ -28,9 +28,9 @@ public class SwiggyDelivery {
             if (zipcode != code.get(i))
                 flag = 1;
             else
-                throw new InvalidzipcodeException("Invalid");
+                throw new InvalidzipcodeException("Invalid code.");
         }
-        System.out.println("Delivery available at this location");
+        System.out.println("Delivery available at this location.");
     }
 }
 
@@ -39,3 +39,13 @@ class InvalidzipcodeException extends Exception {
         super(s);
     }
 }
+/*OUTPUT
+Enter the zipcode
+123
+Delivery unavailable at this location.
+ */
+/*
+Enter the zipcode
+234
+Delivery available at this location.
+ */
